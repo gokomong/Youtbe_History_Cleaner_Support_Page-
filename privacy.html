@@ -101,12 +101,19 @@
 
         <h3>Execution metadata</h3>
         <ul>
-          <li>selected account id and email</li>
-          <li>selected YouTube channel id and fingerprint</li>
-          <li>selected delete scope (<code>watch</code>, <code>search</code>, or both)</li>
-          <li>execution status, timestamps, user-visible result message, and error code</li>
-          <li>pending manual-resume context when reauthentication is required</li>
-          <li>recent execution summaries by account and by watch channel</li>
+          <li>
+            last job result fields such as account id, account email, selected scope, scope
+            results, timestamps, user-visible result message, and error code
+          </li>
+          <li>
+            pending manual-resume context when reauthentication is required, including tab id,
+            selected account id/email, selected scope, prior scope results, selected watch-channel
+            id, and the My Activity source URL needed to resume safely
+          </li>
+          <li>
+            recent execution summaries by account and by watch channel, including status,
+            timestamp, message, error code, and selected watch-channel id when relevant
+          </li>
           <li>notification debug trace when notification delivery fails or notification fallback handling throws</li>
         </ul>
 
@@ -259,12 +266,19 @@
 
         <h3>실행 메타데이터</h3>
         <ul>
-          <li>선택한 account id 및 email</li>
-          <li>선택한 YouTube channel id 및 fingerprint</li>
-          <li>선택한 삭제 범위(<code>watch</code>, <code>search</code>, 또는 둘 다)</li>
-          <li>실행 상태, 시간, 사용자에게 표시되는 결과 메시지, 오류 코드</li>
-          <li>재인증이 필요한 경우의 pending manual-resume context</li>
-          <li>계정별 및 watch channel별 최근 실행 요약</li>
+          <li>
+            최근 작업 결과
+            필드(account id, account email, 선택한 삭제 범위, scope 결과, 실행 시간, 결과 메시지,
+            오류 코드 등)
+          </li>
+          <li>
+            재인증이 필요한 경우의 pending manual-resume context(tab id, 선택한 account id/email,
+            선택한 삭제 범위, 이전 scope 결과, 선택한 watch-channel id, 재개용 My Activity URL)
+          </li>
+          <li>
+            계정별 및 watch channel별 최근 실행 요약(상태, 시간, 결과 메시지, 오류 코드,
+            관련 watch-channel id 등)
+          </li>
           <li>notification 전송 실패 또는 fallback 처리 예외 시 debug trace</li>
         </ul>
 
