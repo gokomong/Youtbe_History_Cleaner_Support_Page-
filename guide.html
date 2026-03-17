@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Getting Started | YouTube History Cleaner</title>
+    <meta name="description" content="Getting started guide for the YouTube History Cleaner Chrome extension.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./header-logo-dark.png">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./lang-toggle.js" defer></script>
+    <script src="./page-context.js" defer></script>
+  </head>
+  <body
+    data-page-context="guide"
+    data-current-version="1.1.0"
+    data-title-en="Getting Started | YouTube History Cleaner"
+    data-title-ko="사용 가이드 | YouTube History Cleaner"
+    data-description-en="Getting started guide for the YouTube History Cleaner Chrome extension."
+    data-description-ko="YouTube History Cleaner Chrome 확장의 사용 시작 가이드입니다."
+  >
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="./index.html" class="nav-brand">
+          <img src="./header-logo-dark.png" alt="YouTube History Cleaner logo" class="nav-logo">
+          <span class="nav-brand-name">YouTube History Cleaner</span>
+        </a>
+        <div class="nav-right">
+          <span class="nav-label" data-lang-content="en">Chrome Extension</span>
+          <span class="nav-label" data-lang-content="ko" hidden>Chrome 확장</span>
+          <div class="lang-switch" role="group" aria-label="Language switcher">
+            <button type="button" class="lang-button" data-lang-button="en">EN</button>
+            <button type="button" class="lang-button" data-lang-button="ko">한국어</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <header class="page-hero">
+      <div class="container">
+        <a href="./index.html" class="page-hero-back">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="15 18 9 12 15 6"/></svg>
+          <span data-lang-content="en">Back to Home</span>
+          <span data-lang-content="ko" hidden>홈으로</span>
+        </a>
+
+        <h1 data-lang-content="en">Getting Started</h1>
+        <h1 data-lang-content="ko" hidden>사용 시작 가이드</h1>
+
+        <p class="page-hero-sub" data-lang-content="en">
+          Scan your accounts, pick what to delete, and run — it's three steps. Here's exactly how it works.
+        </p>
+        <p class="page-hero-sub" data-lang-content="ko" hidden>
+          계정 조회하고, 삭제 범위 고르고, 실행하면 끝이에요. 실제 동작 흐름을 그대로 설명합니다.
+        </p>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="page-content">
+      <div class="container">
+
+        <section class="page-banner" data-page-context-banner hidden>
+          <p data-page-context-banner-content="en"></p>
+          <p data-page-context-banner-content="ko" hidden></p>
+        </section>
+
+        <div class="prose">
+
+          <div data-lang-content="en">
+            <h2>Before you start — pin the extension</h2>
+            <p>
+              Pin the extension icon to your Chrome toolbar before anything else. When a job finishes,
+              a badge number pops up on the icon to tell you whether it succeeded or failed —
+              no need to reopen the popup just to check.
+            </p>
+
+            <h2>Step 1 — Scan your accounts</h2>
+            <p>
+              Open the popup and press <code>Scan</code>. The extension automatically searches Chrome
+              for every Google account you're currently signed into and saves the results in the background.
+              Once the scan is done, the badge on the toolbar icon updates right away with the outcome.
+            </p>
+
+            <h2>Step 2 — Pick an account and a YouTube channel</h2>
+            <p>
+              Reopen the popup and you'll see a tidy list of your Google accounts alongside
+              the YouTube channels linked to each one. Select the account you want to clean up,
+              then pick the YouTube channel.
+            </p>
+
+            <div class="info-grid">
+              <div class="info-card">
+                <h3>Watch history</h3>
+                <p>Clears history on YouTube. The extension confirms your active account and channel before touching anything.</p>
+              </div>
+              <div class="info-card">
+                <h3>Search history</h3>
+                <p>Clears history on My Activity. The extension confirms your active Google account before it deletes anything.</p>
+              </div>
+            </div>
+
+            <h2>Step 3 — Choose what to delete and run</h2>
+            <p>
+              Check <code>watch</code> to clear your watch history, <code>search</code> to clear
+              your search history, or tick both. Hit run and you're done.
+            </p>
+
+            <h2>If Google asks you to verify again mid-run</h2>
+            <p>
+              Sometimes My Activity shows an extra sign-in screen halfway through. The extension stops
+              and waits instead of guessing what to do. Finish the verification in that tab,
+              then come back to the popup and press <code>Resume</code> to pick up right where you left off.
+            </p>
+
+            <h2>A few things worth knowing</h2>
+            <ul>
+              <li>If the extension can't confirm which account is active, it stops on its own — it won't delete anything it's not sure about.</li>
+              <li>If a Google account doesn't have a YouTube channel set up, the extension may fall back to the default Google profile.</li>
+              <li>Use <code>Recheck Channel</code> if the channel shown in the popup looks wrong — it re-checks the active tab.</li>
+            </ul>
+
+            <p>Questions? See the <a href="./updates.html">Release Notes</a>, <a href="./privacy.html">Privacy Policy</a>, or <a href="./support.html">Support page</a>.</p>
+          </div>
+
+          <div data-lang-content="ko" hidden>
+            <h2>시작 전에 — 확장 아이콘을 고정해두세요</h2>
+            <p>
+              Chrome 툴바에 확장 아이콘을 고정해두는 걸 먼저 추천해요.
+              작업이 끝나면 아이콘에 숫자 뱃지가 자동으로 뜨면서 성공인지 실패인지 바로 알 수 있거든요.
+              팝업을 다시 열어서 확인하러 들어갈 필요가 없어요.
+            </p>
+
+            <h2>1단계 — 계정 조회</h2>
+            <p>
+              팝업을 열고 <code>조회</code>를 누르면, 확장이 현재 Chrome에 로그인된 Google 계정들을
+              자동으로 탐색해서 저장합니다. 백그라운드에서 조용히 처리되니까 다른 걸 하면서 잠깐 기다리면 돼요.
+              조회가 끝나면 툴바 아이콘 뱃지에 결과가 바로 반영됩니다.
+            </p>
+
+            <h2>2단계 — 계정과 YouTube 채널 선택</h2>
+            <p>
+              팝업을 다시 열면 탐색된 Google 계정 목록과 각 계정에 연결된 YouTube 채널이 깔끔하게 정리돼
+              있어요. 지우고 싶은 계정을 고르고, 대상 YouTube 채널을 선택하면 됩니다.
+            </p>
+
+            <div class="info-grid">
+              <div class="info-card">
+                <h3>시청 기록</h3>
+                <p>YouTube에서 시청 기록을 삭제합니다. 삭제 전에 활성 계정과 채널을 확인하고 진행해요.</p>
+              </div>
+              <div class="info-card">
+                <h3>검색 기록</h3>
+                <p>My Activity에서 검색 기록을 삭제합니다. 삭제 전에 활성 Google 계정을 한 번 더 확인해요.</p>
+              </div>
+            </div>
+
+            <h2>3단계 — 삭제 범위 선택 후 실행</h2>
+            <p>
+              시청 기록을 지우려면 <code>watch</code>, 검색 기록을 지우려면 <code>search</code>,
+              둘 다 지우려면 모두 체크하세요. 실행 버튼을 누르면 끝입니다.
+            </p>
+
+            <h2>중간에 Google이 재인증을 요청하면</h2>
+            <p>
+              My Activity에서 추가 인증 화면이 뜨는 경우가 있어요. 이때 확장은 멋대로 넘어가지 않고
+              그 자리에서 멈춰서 기다립니다. 해당 탭에서 인증을 마치고, 팝업으로 돌아와서
+              <code>재개</code>를 누르면 멈췄던 지점부터 이어서 진행돼요.
+            </p>
+
+            <h2>알아두면 좋은 것들</h2>
+            <ul>
+              <li>어떤 계정이 활성화돼 있는지 확인할 수 없으면 확장이 알아서 멈춥니다. 확실하지 않은 상태에서는 아무것도 삭제하지 않아요.</li>
+              <li>Google 계정에 YouTube 채널이 연결돼 있지 않으면 기본 Google 프로필로 대체될 수 있어요.</li>
+              <li>팝업에 표시된 채널이 이상해 보이면 <code>채널 다시 확인</code>을 눌러보세요. 현재 탭 기준으로 다시 체크해줍니다.</li>
+            </ul>
+
+            <p>더 궁금한 게 있다면 <a href="./updates.html">릴리즈노트</a>, <a href="./privacy.html">개인정보처리방침</a>, <a href="./support.html">지원 페이지</a>를 확인해보세요.</p>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-brand">
+          <div class="footer-logo-row">
+            <img src="./header-logo-dark.png" alt="" class="footer-logo">
+            <span class="footer-name">YouTube History Cleaner</span>
+          </div>
+          <p class="footer-copy">© 2026 · Chrome Extension</p>
+        </div>
+        <nav class="footer-links">
+          <a href="./guide.html">
+            <span data-lang-content="en">Guide</span>
+            <span data-lang-content="ko" hidden>가이드</span>
+          </a>
+          <a href="./updates.html">
+            <span data-lang-content="en">Release Notes</span>
+            <span data-lang-content="ko" hidden>릴리즈노트</span>
+          </a>
+          <a href="./privacy.html">
+            <span data-lang-content="en">Privacy</span>
+            <span data-lang-content="ko" hidden>개인정보처리방침</span>
+          </a>
+          <a href="./support.html">
+            <span data-lang-content="en">Support</span>
+            <span data-lang-content="ko" hidden>지원</span>
+          </a>
+        </nav>
+      </div>
+    </footer>
+
+  </body>
+</html>

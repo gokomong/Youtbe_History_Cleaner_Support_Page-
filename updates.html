@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Release Notes | YouTube History Cleaner</title>
+    <meta name="description" content="Release notes for the YouTube History Cleaner Chrome extension.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./header-logo-dark.png">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./lang-toggle.js" defer></script>
+    <script src="./page-context.js" defer></script>
+  </head>
+  <body
+    data-page-context="updates"
+    data-current-version="1.1.0"
+    data-title-en="Release Notes | YouTube History Cleaner"
+    data-title-ko="릴리즈노트 | YouTube History Cleaner"
+    data-description-en="Release notes for the YouTube History Cleaner Chrome extension."
+    data-description-ko="YouTube History Cleaner Chrome 확장의 릴리즈노트입니다."
+  >
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="./index.html" class="nav-brand">
+          <img src="./header-logo-dark.png" alt="YouTube History Cleaner logo" class="nav-logo">
+          <span class="nav-brand-name">YouTube History Cleaner</span>
+        </a>
+        <div class="nav-right">
+          <span class="nav-label" data-lang-content="en">Chrome Extension</span>
+          <span class="nav-label" data-lang-content="ko" hidden>Chrome 확장</span>
+          <div class="lang-switch" role="group" aria-label="Language switcher">
+            <button type="button" class="lang-button" data-lang-button="en">EN</button>
+            <button type="button" class="lang-button" data-lang-button="ko">한국어</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <header class="page-hero">
+      <div class="container">
+        <a href="./index.html" class="page-hero-back">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="15 18 9 12 15 6"/></svg>
+          <span data-lang-content="en">Back to Home</span>
+          <span data-lang-content="ko" hidden>홈으로</span>
+        </a>
+
+        <h1 data-lang-content="en">Release Notes</h1>
+        <h1 data-lang-content="ko" hidden>릴리즈노트</h1>
+
+        <p class="page-hero-sub" data-lang-content="en">
+          Track the latest extension behavior changes, release highlights, and validation notes.
+        </p>
+        <p class="page-hero-sub" data-lang-content="ko" hidden>
+          최신 확장 동작 변경점, 릴리즈 핵심 사항, 검증 메모를 이 페이지에서 확인할 수 있습니다.
+        </p>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="page-content">
+      <div class="container">
+
+        <section class="page-banner" data-page-context-banner hidden>
+          <p data-page-context-banner-content="en"></p>
+          <p data-page-context-banner-content="ko" hidden></p>
+        </section>
+
+        <!-- EN -->
+        <div data-lang-content="en">
+          <div class="release-item">
+            <div class="release-pills">
+              <span class="pill pill-accent">Latest</span>
+              <span class="pill pill-muted">1.1.0</span>
+              <span class="pill pill-muted">2026-03-17</span>
+            </div>
+            <h2>Version 1.1.0</h2>
+            <p>Two focused improvements this release — broader language support and a more reliable search deletion path.</p>
+            <h3>Language support expanded</h3>
+            <p>
+              The extension now covers 22 languages across YouTube and My Activity —
+              Korean, German, Japanese, Spanish (Latin America), Portuguese (Brazil), French, Italian, Polish, Turkish, Dutch,
+              Swedish, Danish, Finnish, Czech, Romanian, Hungarian, Indonesian, Thai, Vietnamese, Hindi,
+              Chinese (Simplified), and Chinese (Traditional).
+              If the previous version missed buttons or got confused on non-English pages, this update should cover those cases.
+            </p>
+            <h3>Search deletion logic improved</h3>
+            <p>
+              The search history deletion flow now targets exact anchors on My Activity first,
+              making it more consistent and less likely to skip entries or stall mid-run.
+            </p>
+          </div>
+
+          <div class="release-item" style="margin-top: 20px;">
+            <div class="release-pills">
+              <span class="pill pill-muted">1.0.0</span>
+              <span class="pill pill-muted">2026-03-09</span>
+            </div>
+            <h2>Version 1.0.0</h2>
+            <p>
+              First release. Covers the core flow — scan signed-in Google accounts,
+              pick a YouTube channel, and clear watch or search history.
+            </p>
+          </div>
+        </div>
+
+        <!-- KO -->
+        <div data-lang-content="ko" hidden>
+          <div class="release-item">
+            <div class="release-pills">
+              <span class="pill pill-accent">Latest</span>
+              <span class="pill pill-muted">1.1.0</span>
+              <span class="pill pill-muted">2026-03-17</span>
+            </div>
+            <h2>버전 1.1.0</h2>
+            <p>이번 업데이트는 두 가지에 집중했어요 — 언어 지원 확대와 검색 삭제 로직 개선입니다.</p>
+            <h3>언어 지원 대폭 확대</h3>
+            <p>
+              YouTube와 My Activity에서 이제 22개 언어를 지원해요 —
+              한국어, 독일어, 일본어, 스페인어 (중남미), 포르투갈어 (브라질), 프랑스어, 이탈리아어, 폴란드어, 터키어, 네덜란드어,
+              스웨덴어, 덴마크어, 핀란드어, 체코어, 루마니아어, 헝가리어, 인도네시아어, 태국어, 베트남어, 힌디어,
+              중국어 (간체), 중국어 (번체).
+              이전 버전에서 영어 외 언어 페이지에서 버튼을 못 찾거나 오작동하던 경우가 있었다면,
+              이번 업데이트로 대부분 해결됩니다.
+            </p>
+            <h3>검색 삭제 로직 개선</h3>
+            <p>
+              My Activity에서 검색 기록을 삭제할 때 이제 정확한 anchor 경로를 먼저 찾아서 진행해요.
+              덕분에 항목을 건너뛰거나 중간에 멈추는 경우가 줄었습니다.
+            </p>
+          </div>
+
+          <div class="release-item" style="margin-top: 20px;">
+            <div class="release-pills">
+              <span class="pill pill-muted">1.0.0</span>
+              <span class="pill pill-muted">2026-03-09</span>
+            </div>
+            <h2>버전 1.0.0</h2>
+            <p>
+              첫 번째 릴리즈예요. Google 계정 조회, YouTube 채널 선택, 시청·검색 기록 삭제까지
+              핵심 기능을 담은 초기 버전입니다.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-brand">
+          <div class="footer-logo-row">
+            <img src="./header-logo-dark.png" alt="" class="footer-logo">
+            <span class="footer-name">YouTube History Cleaner</span>
+          </div>
+          <p class="footer-copy">© 2026 · Chrome Extension</p>
+        </div>
+        <nav class="footer-links">
+          <a href="./guide.html">
+            <span data-lang-content="en">Guide</span>
+            <span data-lang-content="ko" hidden>가이드</span>
+          </a>
+          <a href="./updates.html">
+            <span data-lang-content="en">Release Notes</span>
+            <span data-lang-content="ko" hidden>릴리즈노트</span>
+          </a>
+          <a href="./privacy.html">
+            <span data-lang-content="en">Privacy</span>
+            <span data-lang-content="ko" hidden>개인정보처리방침</span>
+          </a>
+          <a href="./support.html">
+            <span data-lang-content="en">Support</span>
+            <span data-lang-content="ko" hidden>지원</span>
+          </a>
+        </nav>
+      </div>
+    </footer>
+
+  </body>
+</html>

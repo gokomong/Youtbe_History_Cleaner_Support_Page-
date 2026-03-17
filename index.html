@@ -4,78 +4,218 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>YouTube History Cleaner</title>
-    <meta
-      name="description"
-      content="Official privacy and support pages for the YouTube History Cleaner Chrome extension."
-    >
+    <meta name="description" content="Official getting started, release notes, privacy, and support pages for the YouTube History Cleaner Chrome extension.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./header-logo-dark.png">
     <link rel="stylesheet" href="./styles.css">
     <script src="./lang-toggle.js" defer></script>
   </head>
   <body
     data-title-en="YouTube History Cleaner"
     data-title-ko="YouTube History Cleaner"
-    data-description-en="Official privacy and support pages for the YouTube History Cleaner Chrome extension."
-    data-description-ko="YouTube History Cleaner Chrome 확장의 공식 개인정보처리방침 및 지원 페이지입니다."
+    data-description-en="Official getting started, release notes, privacy, and support pages for the YouTube History Cleaner Chrome extension."
+    data-description-ko="YouTube History Cleaner Chrome 확장의 공식 사용 가이드, 릴리즈노트, 개인정보처리방침 및 지원 링크 모음입니다."
   >
-    <header class="site-header">
-      <div class="container">
-        <div class="topbar">
-          <p class="eyebrow" data-lang-content="en">Chrome Extension Support Site</p>
-          <p class="eyebrow" data-lang-content="ko" hidden>Chrome 확장 지원 사이트</p>
 
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="./index.html" class="nav-brand">
+          <img src="./header-logo-dark.png" alt="YouTube History Cleaner logo" class="nav-logo">
+          <span class="nav-brand-name">YouTube History Cleaner</span>
+        </a>
+        <div class="nav-right">
+          <span class="nav-label" data-lang-content="en">Chrome Extension</span>
+          <span class="nav-label" data-lang-content="ko" hidden>Chrome 확장</span>
           <div class="lang-switch" role="group" aria-label="Language switcher">
             <button type="button" class="lang-button" data-lang-button="en">EN</button>
             <button type="button" class="lang-button" data-lang-button="ko">한국어</button>
           </div>
         </div>
+      </div>
+    </nav>
 
-        <div class="hero-title">
-          <img class="hero-logo" src="./header-logo-dark.png" alt="YouTube History Cleaner logo">
-          <h1>YouTube History Cleaner</h1>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          <span data-lang-content="en">v1.1.0 · Chrome Extension</span>
+          <span data-lang-content="ko" hidden>v1.1.0 · Chrome 확장</span>
         </div>
 
-        <p class="lead" data-lang-content="en">
-          Official privacy policy and support links for the Chrome extension that helps a user clear
-          YouTube watch history and YouTube search history for a selected signed-in Google account.
+        <h1 data-lang-content="en">Clean YouTube History,<br>Just Like That.</h1>
+        <h1 data-lang-content="ko" hidden>YouTube 기록,<br>깔끔하게 지워드립니다.</h1>
+
+        <p class="hero-sub" data-lang-content="en">
+          Select a signed-in Google account and clear YouTube watch history and search history — safely, locally, no data sent anywhere.
         </p>
-        <p class="lead" data-lang-content="ko" hidden>
-          로그인된 Google 계정을 선택해 YouTube 시청 기록과 검색 기록을 정리하는 Chrome 확장의
-          공식 개인정보처리방침 및 지원 링크 모음입니다.
+        <p class="hero-sub" data-lang-content="ko" hidden>
+          로그인된 Google 계정을 선택해 YouTube 시청·검색 기록을 정리하는 Chrome 확장 프로그램. 완전 로컬 처리, 데이터 수집 없음.
         </p>
+
+        <div class="hero-cta">
+          <a href="./guide.html" class="btn-primary">
+            <span data-lang-content="en">Getting Started</span>
+            <span data-lang-content="ko" hidden>사용 가이드 보기</span>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="./updates.html" class="btn-secondary">
+            <span data-lang-content="en">Release Notes</span>
+            <span data-lang-content="ko" hidden>릴리즈노트</span>
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22 4 12 14.01 9 11.01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-lang-content="en">Completely Free</span>
+            <span data-lang-content="ko" hidden>완전 무료</span>
+          </div>
+          <div class="hero-meta-divider"></div>
+          <div class="hero-meta-item">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-lang-content="en">Local Only · No Data Collection</span>
+            <span data-lang-content="ko" hidden>로컬 처리 · 데이터 수집 없음</span>
+          </div>
+          <div class="hero-meta-divider"></div>
+          <div class="hero-meta-item">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="2" y1="12" x2="22" y2="12" stroke-width="2" stroke-linecap="round"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-lang-content="en">Chrome Only</span>
+            <span data-lang-content="ko" hidden>Chrome 전용</span>
+          </div>
+        </div>
       </div>
-    </header>
+    </section>
 
-    <main class="container content-grid">
-      <section class="card">
-        <h2 data-lang-content="en">Privacy Policy</h2>
-        <h2 data-lang-content="ko" hidden>개인정보처리방침</h2>
+    <!-- CARDS -->
+    <section class="cards-section">
+      <div class="container">
+        <p class="section-eyebrow" data-lang-content="en">Quick Links</p>
+        <p class="section-eyebrow" data-lang-content="ko" hidden>빠른 링크</p>
 
-        <p data-lang-content="en">
-          Read how the extension handles local state, permissions, and user-requested cleanup flows.
-        </p>
-        <p data-lang-content="ko" hidden>
-          확장이 로컬 상태, 권한, 사용자 요청 기반 정리 흐름을 어떻게 처리하는지 확인할 수 있습니다.
-        </p>
+        <h2 class="section-title" data-lang-content="en">Everything in one place</h2>
+        <h2 class="section-title" data-lang-content="ko" hidden>모든 것을 한곳에서</h2>
 
-        <p data-lang-content="en"><a class="button" href="./privacy.html">Open Privacy Policy</a></p>
-        <p data-lang-content="ko" hidden><a class="button" href="./privacy.html">개인정보처리방침 보기</a></p>
-      </section>
+        <div class="cards-grid">
 
-      <section class="card">
-        <h2 data-lang-content="en">Support</h2>
-        <h2 data-lang-content="ko" hidden>지원</h2>
+          <!-- Getting Started -->
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon-box">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <div class="card-arrow">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10"/></svg>
+              </div>
+            </div>
+            <h2 data-lang-content="en">Getting Started</h2>
+            <h2 data-lang-content="ko" hidden>사용 가이드</h2>
+            <p data-lang-content="en">Learn the flow in three steps: refresh accounts, choose scope and channel, then run or resume safely.</p>
+            <p data-lang-content="ko" hidden>3단계로 빠르게 시작하세요. 계정 조회 → 범위 선택 → 실행 또는 재개.</p>
+            <a href="./guide.html" class="card-btn card-btn-red">
+              <span data-lang-content="en">Open Guide</span>
+              <span data-lang-content="ko" hidden>가이드 보기</span>
+            </a>
+          </div>
 
-        <p data-lang-content="en">
-          Get help, report bugs, and send feedback through the support page.
-        </p>
-        <p data-lang-content="ko" hidden>
-          지원 페이지에서 버그를 제보하고, 문의를 남기고, 피드백을 전달할 수 있습니다.
-        </p>
+          <!-- Latest Update -->
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon-box">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div class="card-arrow">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10"/></svg>
+              </div>
+            </div>
+            <span class="card-badge">v1.1.0 · 2026-03-17</span>
+            <h2 data-lang-content="en">Latest Update</h2>
+            <h2 data-lang-content="ko" hidden>릴리즈노트</h2>
+            <p data-lang-content="en">Search deletion now prefers exact My Activity anchors, locale coverage expanded, popup states are clearer.</p>
+            <p data-lang-content="ko" hidden>검색 삭제 exact anchor 우선 적용, locale 지원 확대, popup 상태 표시 개선.</p>
+            <a href="./updates.html" class="card-btn card-btn-dark">
+              <span data-lang-content="en">Release Notes</span>
+              <span data-lang-content="ko" hidden>릴리즈노트 보기</span>
+            </a>
+          </div>
 
-        <p data-lang-content="en"><a class="button" href="./support.html">Open Support</a></p>
-        <p data-lang-content="ko" hidden><a class="button" href="./support.html">지원 페이지 보기</a></p>
-      </section>
-    </main>
+          <!-- Privacy -->
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon-box">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <div class="card-arrow">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10"/></svg>
+              </div>
+            </div>
+            <h2 data-lang-content="en">Privacy Policy</h2>
+            <h2 data-lang-content="ko" hidden>개인정보처리방침</h2>
+            <p data-lang-content="en">Runs locally only. No backend API, no analytics, no sale of personal data. See exactly what is stored and for how long.</p>
+            <p data-lang-content="ko" hidden>로컬에서만 작동합니다. 백엔드 없음, analytics 없음, 개인정보 판매 없음. 저장 항목과 기간을 확인하세요.</p>
+            <a href="./privacy.html" class="card-btn card-btn-dark">
+              <span data-lang-content="en">Privacy Policy</span>
+              <span data-lang-content="ko" hidden>방침 보기</span>
+            </a>
+          </div>
+
+          <!-- Support -->
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon-box">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="card-arrow">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M7 7h10v10"/></svg>
+              </div>
+            </div>
+            <h2 data-lang-content="en">Support</h2>
+            <h2 data-lang-content="ko" hidden>고객 지원</h2>
+            <p data-lang-content="en">Report bugs, ask questions, or send feedback via email or GitHub Issues.</p>
+            <p data-lang-content="ko" hidden>버그 제보, 문의, 피드백을 이메일 또는 GitHub Issues로 전달하세요.</p>
+            <a href="./support.html" class="card-btn card-btn-dark">
+              <span data-lang-content="en">Get Support</span>
+              <span data-lang-content="ko" hidden>지원 받기</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-brand">
+          <div class="footer-logo-row">
+            <img src="./header-logo-dark.png" alt="" class="footer-logo">
+            <span class="footer-name">YouTube History Cleaner</span>
+          </div>
+          <p class="footer-copy">© 2026 · Chrome Extension · Free &amp; Open Source</p>
+        </div>
+        <nav class="footer-links">
+          <a href="./guide.html">
+            <span data-lang-content="en">Guide</span>
+            <span data-lang-content="ko" hidden>가이드</span>
+          </a>
+          <a href="./updates.html">
+            <span data-lang-content="en">Release Notes</span>
+            <span data-lang-content="ko" hidden>릴리즈노트</span>
+          </a>
+          <a href="./privacy.html">
+            <span data-lang-content="en">Privacy</span>
+            <span data-lang-content="ko" hidden>개인정보처리방침</span>
+          </a>
+          <a href="./support.html">
+            <span data-lang-content="en">Support</span>
+            <span data-lang-content="ko" hidden>지원</span>
+          </a>
+        </nav>
+      </div>
+    </footer>
 
   </body>
 </html>

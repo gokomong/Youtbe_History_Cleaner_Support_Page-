@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Privacy Policy | YouTube History Cleaner</title>
-    <meta
-      name="description"
-      content="Privacy Policy for the YouTube History Cleaner Chrome extension."
-    >
+    <meta name="description" content="Privacy Policy for the YouTube History Cleaner Chrome extension.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./header-logo-dark.png">
     <link rel="stylesheet" href="./styles.css">
     <script src="./lang-toggle.js" defer></script>
   </head>
@@ -17,359 +18,301 @@
     data-description-en="Privacy Policy for the YouTube History Cleaner Chrome extension."
     data-description-ko="YouTube History Cleaner Chrome 확장의 개인정보처리방침입니다."
   >
-    <header class="subpage-header">
-      <div class="container">
-        <div class="topbar">
-          <p class="eyebrow" data-lang-content="en"><a href="./index.html">YouTube History Cleaner</a></p>
-          <p class="eyebrow" data-lang-content="ko" hidden><a href="./index.html">YouTube History Cleaner</a></p>
 
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="./index.html" class="nav-brand">
+          <img src="./header-logo-dark.png" alt="YouTube History Cleaner logo" class="nav-logo">
+          <span class="nav-brand-name">YouTube History Cleaner</span>
+        </a>
+        <div class="nav-right">
+          <span class="nav-label" data-lang-content="en">Chrome Extension</span>
+          <span class="nav-label" data-lang-content="ko" hidden>Chrome 확장</span>
           <div class="lang-switch" role="group" aria-label="Language switcher">
             <button type="button" class="lang-button" data-lang-button="en">EN</button>
             <button type="button" class="lang-button" data-lang-button="ko">한국어</button>
           </div>
         </div>
+      </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <header class="page-hero">
+      <div class="container">
+        <a href="./index.html" class="page-hero-back">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="15 18 9 12 15 6"/></svg>
+          <span data-lang-content="en">Back to Home</span>
+          <span data-lang-content="ko" hidden>홈으로</span>
+        </a>
 
         <h1 data-lang-content="en">Privacy Policy</h1>
         <h1 data-lang-content="ko" hidden>개인정보처리방침</h1>
 
-        <p class="lead" data-lang-content="en">
-          This page describes how the extension accesses sites, stores local state, and limits data
-          use to the cleanup flow explicitly requested by the user.
+        <p class="page-hero-sub" data-lang-content="en">
+          How the extension accesses sites, stores local state, and limits data use to the cleanup flow explicitly requested by the user.
         </p>
-        <p class="lead" data-lang-content="ko" hidden>
-          이 페이지는 확장이 어떤 사이트에 접근하는지, 어떤 로컬 상태를 저장하는지, 그리고
-          사용자 요청 기반 정리 흐름으로만 데이터 사용을 제한하는지를 설명합니다.
+        <p class="page-hero-sub" data-lang-content="ko" hidden>
+          확장이 어떤 사이트에 접근하는지, 어떤 로컬 상태를 저장하는지, 사용자 요청 기반 정리 흐름으로만 데이터 사용을 제한하는지를 설명합니다.
         </p>
       </div>
     </header>
 
-    <main class="container prose">
-      <div data-lang-content="en">
-        <h2>Summary</h2>
-        <p>
-          YouTube History Cleaner helps a user clear YouTube watch history and YouTube search history
-          for a selected signed-in Google account.
-        </p>
-        <ul>
-          <li>The extension runs only after an explicit user action in the popup.</li>
-          <li>The extension does not sell data or send personal data to external servers.</li>
-          <li>Runtime state is stored locally in <code>chrome.storage.local</code>.</li>
-        </ul>
+    <!-- CONTENT -->
+    <main class="page-content">
+      <div class="container">
+        <div class="prose">
 
-        <h2>What The Extension Accesses</h2>
-        <ul>
-          <li>
-            <code>https://accounts.google.com/*</code> to discover signed-in Google accounts and
-            switch to the account the user selected.
-          </li>
-          <li>
-            <code>https://www.youtube.com/*</code> to clear watch history and verify the active
-            Google account and active YouTube channel before destructive actions.
-          </li>
-          <li>
-            <code>https://myactivity.google.com/*</code> to clear YouTube search history, verify the
-            active Google account, and handle reauthentication/manual resume.
-          </li>
-        </ul>
-        <p>
-          The extension does not monitor browsing activity in the background. It only interacts with
-          these pages while executing a user-requested cleanup flow.
-        </p>
+          <!-- EN -->
+          <div data-lang-content="en">
+            <h2>Summary</h2>
+            <p>YouTube History Cleaner helps a user clear YouTube watch history and YouTube search history for a selected signed-in Google account.</p>
+            <ul>
+              <li>The extension runs only after an explicit user action in the popup.</li>
+              <li>The extension does not sell data or send personal data to external servers.</li>
+              <li>Runtime state is stored locally in <code>chrome.storage.local</code>.</li>
+            </ul>
 
-        <h2>Data Processed Locally</h2>
-        <p>
-          The extension may store the following local-only data so the requested cleanup flow can run
-          safely and predictably:
-        </p>
+            <h2>What The Extension Accesses</h2>
+            <ul>
+              <li><code>https://accounts.google.com/*</code> to discover signed-in Google accounts and switch to the account the user selected.</li>
+              <li><code>https://www.youtube.com/*</code> to clear watch history and verify the active Google account and active YouTube channel before destructive actions.</li>
+              <li><code>https://myactivity.google.com/*</code> to clear YouTube search history, verify the active Google account, and handle reauthentication/manual resume.</li>
+            </ul>
+            <p>The extension does not monitor browsing activity in the background. It only interacts with these pages while executing a user-requested cleanup flow.</p>
 
-        <h3>Account metadata shown in the popup</h3>
-        <ul>
-          <li>account id</li>
-          <li>email address</li>
-          <li>display name</li>
-          <li>account chooser metadata needed to repeat the selected account switch</li>
-        </ul>
+            <h2>Data Processed Locally</h2>
+            <p>The extension may store the following local-only data so the requested cleanup flow can run safely and predictably:</p>
 
-        <h3>YouTube channel metadata shown in the popup</h3>
-        <ul>
-          <li>channel id</li>
-          <li>display name</li>
-          <li>subtitle or handle</li>
-          <li>channel fingerprint</li>
-          <li>channel switch descriptor used to target the selected channel</li>
-        </ul>
+            <h3>Account metadata shown in the popup</h3>
+            <ul>
+              <li>account id</li>
+              <li>email address</li>
+              <li>display name</li>
+              <li>account chooser metadata needed to repeat the selected account switch</li>
+            </ul>
 
-        <h3>Execution metadata</h3>
-        <ul>
-          <li>
-            last job result fields such as account id, account email, selected scope, scope
-            results, timestamps, user-visible result message, and error code
-          </li>
-          <li>
-            pending manual-resume context when reauthentication is required, including tab id,
-            selected account id/email, selected scope, prior scope results, selected watch-channel
-            id, and the My Activity source URL needed to resume safely
-          </li>
-          <li>
-            recent execution summaries by account and by watch channel, including status,
-            timestamp, message, error code, and selected watch-channel id when relevant
-          </li>
-          <li>notification debug trace when notification delivery fails or notification fallback handling throws</li>
-        </ul>
+            <h3>YouTube channel metadata shown in the popup</h3>
+            <ul>
+              <li>channel id</li>
+              <li>display name</li>
+              <li>subtitle or handle</li>
+              <li>channel fingerprint</li>
+              <li>channel switch descriptor used to target the selected channel</li>
+            </ul>
 
-        <h3>Popup UI preference</h3>
-        <ul>
-          <li>popup theme preference (<code>dark</code> or <code>light</code>)</li>
-        </ul>
+            <h3>Execution metadata</h3>
+            <ul>
+              <li>last job result fields such as account id, account email, selected scope, scope results, timestamps, user-visible result message, and error code</li>
+              <li>pending manual-resume context when reauthentication is required, including tab id, selected account id/email, selected scope, prior scope results, selected watch-channel id, and the My Activity source URL needed to resume safely</li>
+              <li>recent execution summaries by account and by watch channel, including status, timestamp, message, error code, and selected watch-channel id when relevant</li>
+              <li>notification debug trace when notification delivery fails or notification fallback handling throws</li>
+            </ul>
 
-        <h2>Local Storage And Retention</h2>
-        <p>
-          The extension stores local state in <code>chrome.storage.local</code> and removes expired
-          items automatically in the background service worker.
-        </p>
-        <ul>
-          <li><code>ytCleaner.lastJobResult</code>: up to 1 hour</li>
-          <li><code>ytCleaner.pendingManualRun</code>: up to 30 minutes</li>
-          <li><code>ytCleaner.lastNotificationDebug</code>: up to 1 hour</li>
-          <li><code>ytCleaner.accountDiscoveryCache</code>: up to 7 days</li>
-          <li><code>ytCleaner.youtubeChannelCache</code>: up to 7 days per account entry</li>
-          <li>
-            <code>ytCleaner.selectedYoutubeChannels</code>: kept only while the related channel cache
-            entry is still valid; stale selections are removed during cleanup
-          </li>
-          <li><code>ytCleaner.youtubeAccountBindings</code>: up to 7 days</li>
-          <li><code>ytCleaner.lastExecutionByAccount</code>: up to 30 days</li>
-          <li><code>ytCleaner.lastWatchExecutionByChannel</code>: up to 30 days</li>
-          <li><code>ytCleaner.popupTheme</code>: kept until the user changes it or clears extension storage</li>
-        </ul>
-        <p>
-          The extension does not persist a convenience preference for the last selected account or
-          delete scope outside the execution/history records listed above.
-        </p>
+            <h3>Popup UI preference</h3>
+            <ul>
+              <li>popup theme preference (<code>dark</code> or <code>light</code>)</li>
+            </ul>
 
-        <h2>Safety Model</h2>
-        <ul>
-          <li>Destructive actions start only from the extension popup.</li>
-          <li>The service worker accepts destructive messages only from the trusted popup page.</li>
-          <li>
-            Before watch-history deletion, the extension verifies the active Google account and active
-            YouTube channel from the YouTube UI and stops if the expected context cannot be confirmed.
-          </li>
-          <li>
-            Before search-history deletion, the extension checks the active account hint on My
-            Activity and stops if the selected account cannot be confirmed.
-          </li>
-          <li>
-            If My Activity requires extra authentication, the extension pauses and waits for the user
-            to manually resume the request.
-          </li>
-        </ul>
+            <h2>Local Storage And Retention</h2>
+            <p>The extension stores local state in <code>chrome.storage.local</code> and removes expired items automatically in the background service worker.</p>
+            <ul>
+              <li><code>ytCleaner.lastJobResult</code>: up to 1 hour</li>
+              <li><code>ytCleaner.pendingManualRun</code>: up to 30 minutes</li>
+              <li><code>ytCleaner.lastNotificationDebug</code>: up to 1 hour</li>
+              <li><code>ytCleaner.accountDiscoveryCache</code>: up to 7 days</li>
+              <li><code>ytCleaner.youtubeChannelCache</code>: up to 7 days per account entry</li>
+              <li><code>ytCleaner.selectedYoutubeChannels</code>: kept only while the related channel cache entry is still valid; stale selections are removed during cleanup</li>
+              <li><code>ytCleaner.youtubeAccountBindings</code>: up to 7 days</li>
+              <li><code>ytCleaner.lastExecutionByAccount</code>: up to 30 days</li>
+              <li><code>ytCleaner.lastWatchExecutionByChannel</code>: up to 30 days</li>
+              <li><code>ytCleaner.popupTheme</code>: kept until the user changes it or clears extension storage</li>
+            </ul>
+            <p>The extension does not persist a convenience preference for the last selected account or delete scope outside the execution/history records listed above.</p>
 
-        <h2>Data Sharing</h2>
-        <ul>
-          <li>No backend API</li>
-          <li>No third-party analytics</li>
-          <li>No remote logging</li>
-          <li>No sale of personal data</li>
-        </ul>
+            <h2>Safety Model</h2>
+            <ul>
+              <li>Destructive actions start only from the extension popup.</li>
+              <li>The service worker accepts destructive messages only from the trusted popup page.</li>
+              <li>Before watch-history deletion, the extension verifies the active Google account and active YouTube channel from the YouTube UI and stops if the expected context cannot be confirmed.</li>
+              <li>Before search-history deletion, the extension checks the active account hint on My Activity and stops if the selected account cannot be confirmed.</li>
+              <li>If My Activity requires extra authentication, the extension pauses and waits for the user to manually resume the request.</li>
+            </ul>
 
-        <h2>Permissions And Host Access</h2>
-        <ul>
-          <li>
-            <code>storage</code>: store minimal local state required for safe execution, manual
-            resume, recent result display, and popup theme preference
-          </li>
-          <li>
-            <code>tabs</code>: open, update, and focus the automation tab used for AccountChooser,
-            YouTube history, and My Activity
-          </li>
-          <li>
-            <code>notifications</code>: show completion or failure results when the popup is closed
-            or unfocused
-          </li>
-        </ul>
-        <p>Host access is limited to:</p>
-        <ul>
-          <li><code>https://accounts.google.com/*</code></li>
-          <li><code>https://www.youtube.com/*</code></li>
-          <li><code>https://myactivity.google.com/*</code></li>
-        </ul>
+            <h2>Data Sharing</h2>
+            <ul>
+              <li>No backend API</li>
+              <li>No third-party analytics</li>
+              <li>No remote logging</li>
+              <li>No sale of personal data</li>
+            </ul>
 
-        <h2>User Control</h2>
-        <ul>
-          <li>The user starts each cleanup request manually.</li>
-          <li>The user can remove the extension at any time from Chrome extension settings.</li>
-          <li>The user can clear the extension's local storage from Chrome.</li>
-        </ul>
+            <h2>Permissions And Host Access</h2>
+            <ul>
+              <li><code>storage</code>: store minimal local state required for safe execution, manual resume, recent result display, and popup theme preference</li>
+              <li><code>tabs</code>: open, update, and focus the automation tab used for AccountChooser, YouTube history, and My Activity</li>
+              <li><code>notifications</code>: show completion or failure results when the popup is closed or unfocused</li>
+            </ul>
+            <p>Host access is limited to:</p>
+            <ul>
+              <li><code>https://accounts.google.com/*</code></li>
+              <li><code>https://www.youtube.com/*</code></li>
+              <li><code>https://myactivity.google.com/*</code></li>
+            </ul>
 
-        <h2>Support</h2>
-        <p>
-          For support, use the contact details listed on the
-          <a href="./support.html">Support page</a>.
-        </p>
-      </div>
+            <h2>User Control</h2>
+            <ul>
+              <li>The user starts each cleanup request manually.</li>
+              <li>The user can remove the extension at any time from Chrome extension settings.</li>
+              <li>The user can clear the extension's local storage from Chrome.</li>
+            </ul>
 
-      <div data-lang-content="ko" hidden>
-        <h2>요약</h2>
-        <p>
-          YouTube History Cleaner는 로그인된 Google 계정을 선택해 YouTube 시청 기록과 검색 기록을
-          정리할 수 있도록 돕는 확장 프로그램입니다.
-        </p>
-        <ul>
-          <li>이 확장은 popup에서 사용자가 직접 실행할 때만 동작합니다.</li>
-          <li>개인정보를 외부 서버로 전송하거나 판매하지 않습니다.</li>
-          <li>런타임 상태는 <code>chrome.storage.local</code>에만 저장됩니다.</li>
-        </ul>
+            <h2>Support</h2>
+            <p>For support, use the contact details listed on the <a href="./support.html">Support page</a>.</p>
+          </div>
 
-        <h2>확장이 접근하는 사이트</h2>
-        <ul>
-          <li>
-            <code>https://accounts.google.com/*</code> 에서 로그인된 Google 계정을 확인하고,
-            사용자가 고른 계정으로 전환합니다.
-          </li>
-          <li>
-            <code>https://www.youtube.com/*</code> 에서 시청 기록을 삭제하고, 파괴적 동작 전에
-            active Google 계정과 active YouTube 채널을 검증합니다.
-          </li>
-          <li>
-            <code>https://myactivity.google.com/*</code> 에서 YouTube 검색 기록을 삭제하고,
-            active Google 계정 검증 및 재인증/manual resume을 처리합니다.
-          </li>
-        </ul>
-        <p>
-          이 확장은 백그라운드에서 사용자의 웹 활동을 모니터링하지 않습니다. 사용자가 요청한 정리
-          흐름을 실행하는 동안에만 해당 페이지들과 상호작용합니다.
-        </p>
+          <!-- KO -->
+          <div data-lang-content="ko" hidden>
+            <h2>요약</h2>
+            <p>YouTube History Cleaner는 로그인된 Google 계정을 선택해 YouTube 시청 기록과 검색 기록을 정리할 수 있도록 돕는 확장 프로그램입니다.</p>
+            <ul>
+              <li>이 확장은 popup에서 사용자가 직접 실행할 때만 동작합니다.</li>
+              <li>개인정보를 외부 서버로 전송하거나 판매하지 않습니다.</li>
+              <li>런타임 상태는 <code>chrome.storage.local</code>에만 저장됩니다.</li>
+            </ul>
 
-        <h2>로컬에서 처리되는 데이터</h2>
-        <p>
-          확장은 사용자가 요청한 정리 흐름을 안전하고 예측 가능하게 수행하기 위해 아래와 같은 로컬
-          전용 데이터를 저장할 수 있습니다.
-        </p>
+            <h2>확장이 접근하는 사이트</h2>
+            <ul>
+              <li><code>https://accounts.google.com/*</code> 에서 로그인된 Google 계정을 확인하고, 사용자가 고른 계정으로 전환합니다.</li>
+              <li><code>https://www.youtube.com/*</code> 에서 시청 기록을 삭제하고, 파괴적 동작 전에 active Google 계정과 active YouTube 채널을 검증합니다.</li>
+              <li><code>https://myactivity.google.com/*</code> 에서 YouTube 검색 기록을 삭제하고, active Google 계정 검증 및 재인증/manual resume을 처리합니다.</li>
+            </ul>
+            <p>이 확장은 백그라운드에서 사용자의 웹 활동을 모니터링하지 않습니다. 사용자가 요청한 정리 흐름을 실행하는 동안에만 해당 페이지들과 상호작용합니다.</p>
 
-        <h3>popup에 표시되는 계정 메타데이터</h3>
-        <ul>
-          <li>account id</li>
-          <li>이메일 주소</li>
-          <li>표시 이름</li>
-          <li>선택한 계정 전환을 다시 수행하기 위한 account chooser 메타데이터</li>
-        </ul>
+            <h2>로컬에서 처리되는 데이터</h2>
+            <p>확장은 사용자가 요청한 정리 흐름을 안전하고 예측 가능하게 수행하기 위해 아래와 같은 로컬 전용 데이터를 저장할 수 있습니다.</p>
 
-        <h3>popup에 표시되는 YouTube 채널 메타데이터</h3>
-        <ul>
-          <li>channel id</li>
-          <li>표시 이름</li>
-          <li>subtitle 또는 handle</li>
-          <li>channel fingerprint</li>
-          <li>선택한 채널을 대상으로 하기 위한 channel switch descriptor</li>
-        </ul>
+            <h3>popup에 표시되는 계정 메타데이터</h3>
+            <ul>
+              <li>account id</li>
+              <li>이메일 주소</li>
+              <li>표시 이름</li>
+              <li>선택한 계정 전환을 다시 수행하기 위한 account chooser 메타데이터</li>
+            </ul>
 
-        <h3>실행 메타데이터</h3>
-        <ul>
-          <li>
-            최근 작업 결과
-            필드(account id, account email, 선택한 삭제 범위, scope 결과, 실행 시간, 결과 메시지,
-            오류 코드 등)
-          </li>
-          <li>
-            재인증이 필요한 경우의 pending manual-resume context(tab id, 선택한 account id/email,
-            선택한 삭제 범위, 이전 scope 결과, 선택한 watch-channel id, 재개용 My Activity URL)
-          </li>
-          <li>
-            계정별 및 watch channel별 최근 실행 요약(상태, 시간, 결과 메시지, 오류 코드,
-            관련 watch-channel id 등)
-          </li>
-          <li>notification 전송 실패 또는 fallback 처리 예외 시 debug trace</li>
-        </ul>
+            <h3>popup에 표시되는 YouTube 채널 메타데이터</h3>
+            <ul>
+              <li>channel id</li>
+              <li>표시 이름</li>
+              <li>subtitle 또는 handle</li>
+              <li>channel fingerprint</li>
+              <li>선택한 채널을 대상으로 하기 위한 channel switch descriptor</li>
+            </ul>
 
-        <h3>Popup UI 설정</h3>
-        <ul>
-          <li>popup theme preference (<code>dark</code> 또는 <code>light</code>)</li>
-        </ul>
+            <h3>실행 메타데이터</h3>
+            <ul>
+              <li>최근 작업 결과 필드(account id, account email, 선택한 삭제 범위, scope 결과, 실행 시간, 결과 메시지, 오류 코드 등)</li>
+              <li>재인증이 필요한 경우의 pending manual-resume context(tab id, 선택한 account id/email, 선택한 삭제 범위, 이전 scope 결과, 선택한 watch-channel id, 재개용 My Activity URL)</li>
+              <li>계정별 및 watch channel별 최근 실행 요약(상태, 시간, 결과 메시지, 오류 코드, 관련 watch-channel id 등)</li>
+              <li>notification 전송 실패 또는 fallback 처리 예외 시 debug trace</li>
+            </ul>
 
-        <h2>로컬 저장 및 보관 기간</h2>
-        <p>
-          확장은 로컬 상태를 <code>chrome.storage.local</code>에 저장하며, 만료된 항목은
-          background service worker가 자동으로 정리합니다.
-        </p>
-        <ul>
-          <li><code>ytCleaner.lastJobResult</code>: 최대 1시간</li>
-          <li><code>ytCleaner.pendingManualRun</code>: 최대 30분</li>
-          <li><code>ytCleaner.lastNotificationDebug</code>: 최대 1시간</li>
-          <li><code>ytCleaner.accountDiscoveryCache</code>: 최대 7일</li>
-          <li><code>ytCleaner.youtubeChannelCache</code>: 계정별 최대 7일</li>
-          <li>
-            <code>ytCleaner.selectedYoutubeChannels</code>: 관련 channel cache entry가 유효한 동안만
-            유지되며, stale selection은 cleanup 시 제거됩니다.
-          </li>
-          <li><code>ytCleaner.youtubeAccountBindings</code>: 최대 7일</li>
-          <li><code>ytCleaner.lastExecutionByAccount</code>: 최대 30일</li>
-          <li><code>ytCleaner.lastWatchExecutionByChannel</code>: 최대 30일</li>
-          <li><code>ytCleaner.popupTheme</code>: 사용자가 바꾸거나 확장 저장소를 지울 때까지 유지</li>
-        </ul>
-        <p>
-          확장은 위 실행/이력 기록 외에 마지막으로 선택한 account나 delete scope를 편의용 설정으로
-          따로 영구 저장하지 않습니다.
-        </p>
+            <h3>Popup UI 설정</h3>
+            <ul>
+              <li>popup theme preference (<code>dark</code> 또는 <code>light</code>)</li>
+            </ul>
 
-        <h2>안전 모델</h2>
-        <ul>
-          <li>파괴적 동작은 확장 popup에서만 시작됩니다.</li>
-          <li>service worker는 trusted popup page에서 온 파괴적 메시지만 허용합니다.</li>
-          <li>
-            시청 기록 삭제 전에는 YouTube UI에서 active Google 계정과 active YouTube 채널을 검증하고,
-            예상한 컨텍스트를 확인할 수 없으면 중단합니다.
-          </li>
-          <li>
-            검색 기록 삭제 전에는 My Activity의 active account hint를 확인하고, 선택한 계정을 확인할 수
-            없으면 중단합니다.
-          </li>
-          <li>
-            My Activity에서 추가 인증이 필요하면 흐름을 일시 중지하고, 사용자가 직접 재개할 때까지 기다립니다.
-          </li>
-        </ul>
+            <h2>로컬 저장 및 보관 기간</h2>
+            <p>확장은 로컬 상태를 <code>chrome.storage.local</code>에 저장하며, 만료된 항목은 background service worker가 자동으로 정리합니다.</p>
+            <ul>
+              <li><code>ytCleaner.lastJobResult</code>: 최대 1시간</li>
+              <li><code>ytCleaner.pendingManualRun</code>: 최대 30분</li>
+              <li><code>ytCleaner.lastNotificationDebug</code>: 최대 1시간</li>
+              <li><code>ytCleaner.accountDiscoveryCache</code>: 최대 7일</li>
+              <li><code>ytCleaner.youtubeChannelCache</code>: 계정별 최대 7일</li>
+              <li><code>ytCleaner.selectedYoutubeChannels</code>: 관련 channel cache entry가 유효한 동안만 유지되며, stale selection은 cleanup 시 제거됩니다.</li>
+              <li><code>ytCleaner.youtubeAccountBindings</code>: 최대 7일</li>
+              <li><code>ytCleaner.lastExecutionByAccount</code>: 최대 30일</li>
+              <li><code>ytCleaner.lastWatchExecutionByChannel</code>: 최대 30일</li>
+              <li><code>ytCleaner.popupTheme</code>: 사용자가 바꾸거나 확장 저장소를 지울 때까지 유지</li>
+            </ul>
+            <p>확장은 위 실행/이력 기록 외에 마지막으로 선택한 account나 delete scope를 편의용 설정으로 따로 영구 저장하지 않습니다.</p>
 
-        <h2>데이터 공유</h2>
-        <ul>
-          <li>backend API 없음</li>
-          <li>제3자 analytics 없음</li>
-          <li>원격 logging 없음</li>
-          <li>개인정보 판매 없음</li>
-        </ul>
+            <h2>안전 모델</h2>
+            <ul>
+              <li>파괴적 동작은 확장 popup에서만 시작됩니다.</li>
+              <li>service worker는 trusted popup page에서 온 파괴적 메시지만 허용합니다.</li>
+              <li>시청 기록 삭제 전에는 YouTube UI에서 active Google 계정과 active YouTube 채널을 검증하고, 예상한 컨텍스트를 확인할 수 없으면 중단합니다.</li>
+              <li>검색 기록 삭제 전에는 My Activity의 active account hint를 확인하고, 선택한 계정을 확인할 수 없으면 중단합니다.</li>
+              <li>My Activity에서 추가 인증이 필요하면 흐름을 일시 중지하고, 사용자가 직접 재개할 때까지 기다립니다.</li>
+            </ul>
 
-        <h2>권한 및 host access</h2>
-        <ul>
-          <li>
-            <code>storage</code>: 안전한 실행, manual resume, 최근 결과 표시, popup theme 저장에 필요한
-            최소 로컬 상태를 저장합니다.
-          </li>
-          <li>
-            <code>tabs</code>: AccountChooser, YouTube history, My Activity에 사용하는 automation tab을
-            열고, 갱신하고, 포커스합니다.
-          </li>
-          <li>
-            <code>notifications</code>: popup이 닫혀 있거나 포커스를 잃었을 때 완료/실패 결과를 표시합니다.
-          </li>
-        </ul>
-        <p>Host access는 아래 사이트로 제한됩니다.</p>
-        <ul>
-          <li><code>https://accounts.google.com/*</code></li>
-          <li><code>https://www.youtube.com/*</code></li>
-          <li><code>https://myactivity.google.com/*</code></li>
-        </ul>
+            <h2>데이터 공유</h2>
+            <ul>
+              <li>backend API 없음</li>
+              <li>제3자 analytics 없음</li>
+              <li>원격 logging 없음</li>
+              <li>개인정보 판매 없음</li>
+            </ul>
 
-        <h2>사용자 제어</h2>
-        <ul>
-          <li>사용자는 각 정리 요청을 직접 시작합니다.</li>
-          <li>Chrome 확장 설정에서 언제든 확장을 제거할 수 있습니다.</li>
-          <li>Chrome에서 확장의 로컬 저장소를 직접 지울 수 있습니다.</li>
-        </ul>
+            <h2>권한 및 host access</h2>
+            <ul>
+              <li><code>storage</code>: 안전한 실행, manual resume, 최근 결과 표시, popup theme 저장에 필요한 최소 로컬 상태를 저장합니다.</li>
+              <li><code>tabs</code>: AccountChooser, YouTube history, My Activity에 사용하는 automation tab을 열고, 갱신하고, 포커스합니다.</li>
+              <li><code>notifications</code>: popup이 닫혀 있거나 포커스를 잃었을 때 완료/실패 결과를 표시합니다.</li>
+            </ul>
+            <p>Host access는 아래 사이트로 제한됩니다.</p>
+            <ul>
+              <li><code>https://accounts.google.com/*</code></li>
+              <li><code>https://www.youtube.com/*</code></li>
+              <li><code>https://myactivity.google.com/*</code></li>
+            </ul>
 
-        <h2>지원</h2>
-        <p>
-          지원이 필요하면 <a href="./support.html">지원 페이지</a>에 있는 연락 방법을 이용하세요.
-        </p>
+            <h2>사용자 제어</h2>
+            <ul>
+              <li>사용자는 각 정리 요청을 직접 시작합니다.</li>
+              <li>Chrome 확장 설정에서 언제든 확장을 제거할 수 있습니다.</li>
+              <li>Chrome에서 확장의 로컬 저장소를 직접 지울 수 있습니다.</li>
+            </ul>
+
+            <h2>지원</h2>
+            <p>지원이 필요하면 <a href="./support.html">지원 페이지</a>에 있는 연락 방법을 이용하세요.</p>
+          </div>
+
+        </div>
       </div>
     </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-brand">
+          <div class="footer-logo-row">
+            <img src="./header-logo-dark.png" alt="" class="footer-logo">
+            <span class="footer-name">YouTube History Cleaner</span>
+          </div>
+          <p class="footer-copy">© 2026 · Chrome Extension</p>
+        </div>
+        <nav class="footer-links">
+          <a href="./guide.html">
+            <span data-lang-content="en">Guide</span>
+            <span data-lang-content="ko" hidden>가이드</span>
+          </a>
+          <a href="./updates.html">
+            <span data-lang-content="en">Release Notes</span>
+            <span data-lang-content="ko" hidden>릴리즈노트</span>
+          </a>
+          <a href="./privacy.html">
+            <span data-lang-content="en">Privacy</span>
+            <span data-lang-content="ko" hidden>개인정보처리방침</span>
+          </a>
+          <a href="./support.html">
+            <span data-lang-content="en">Support</span>
+            <span data-lang-content="ko" hidden>지원</span>
+          </a>
+        </nav>
+      </div>
+    </footer>
+
   </body>
 </html>
