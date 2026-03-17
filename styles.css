@@ -575,6 +575,10 @@ code {
   background: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%);
 }
 
+.guide-visual-card-single {
+  margin: 18px 0 8px;
+}
+
 .guide-visual-strip {
   display: flex;
   align-items: center;
@@ -595,6 +599,12 @@ code {
 
 .guide-shot-wide {
   max-width: 220px;
+}
+
+.guide-shot-notification {
+  width: min(100%, 455px);
+  margin: 0 auto;
+  border-radius: 14px;
 }
 
 .guide-visual-card figcaption {
