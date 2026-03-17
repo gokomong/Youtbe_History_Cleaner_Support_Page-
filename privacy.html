@@ -151,7 +151,7 @@
             <ul>
               <li><code>storage</code>: store minimal local state required for safe execution, manual resume, recent result display, and popup theme preference</li>
               <li><code>tabs</code>: open, update, and focus the automation tab used for AccountChooser, YouTube history, and My Activity</li>
-              <li><code>notifications</code>: show completion or failure results when the popup is closed or unfocused</li>
+              <li><code>notifications</code>: show completion or failure results for cleanup runs, with a service worker fallback path if the Notifications API is unavailable</li>
             </ul>
             <p>Host access is limited to:</p>
             <ul>
@@ -259,7 +259,7 @@
             <ul>
               <li><code>storage</code>: 안전한 실행, manual resume, 최근 결과 표시, popup theme 저장에 필요한 최소 로컬 상태를 저장합니다.</li>
               <li><code>tabs</code>: AccountChooser, YouTube history, My Activity에 사용하는 automation tab을 열고, 갱신하고, 포커스합니다.</li>
-              <li><code>notifications</code>: popup이 닫혀 있거나 포커스를 잃었을 때 완료/실패 결과를 표시합니다.</li>
+              <li><code>notifications</code>: 정리 실행의 완료/실패 결과를 알림으로 표시합니다. Notifications API를 사용할 수 없으면 service worker fallback 경로를 사용합니다.</li>
             </ul>
             <p>Host access는 아래 사이트로 제한됩니다.</p>
             <ul>
