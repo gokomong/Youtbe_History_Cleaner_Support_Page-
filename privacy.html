@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Privacy Policy | YouTube History Cleaner</title>
     <meta name="description" content="Privacy Policy for the YouTube History Cleaner Chrome extension.">
+    <link rel="canonical" href="https://gokomong.github.io/Youtbe_History_Cleaner_Support_Page-/privacy.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./header-logo-dark.png">
-    <link rel="stylesheet" href="./styles.css?v=20260318-1">
+    <link rel="stylesheet" href="./styles.css?v=20260329-1">
     <script src="./lang-toggle.js" defer></script>
   </head>
   <body
@@ -79,7 +80,8 @@
               <li><code>https://www.youtube.com/*</code> to clear watch history and verify the active Google account and active YouTube channel before destructive actions.</li>
               <li><code>https://myactivity.google.com/*</code> to clear YouTube search history, verify the active Google account, and handle reauthentication/manual resume.</li>
             </ul>
-            <p>The extension does not monitor browsing activity in the background. It only interacts with these pages while executing a user-requested cleanup flow.</p>
+            <p>The extension does not monitor general browsing activity in the background. Content scripts are registered on these hosts so the extension can respond when the user opens the popup, but they remain idle until the user starts account discovery, cleanup, or manual resume.</p>
+            <p>On first install, and on eligible version updates, the extension may also open its public guide or release-notes page in a new browser tab.</p>
 
             <h2>Data Processed Locally</h2>
             <p>The extension may store the following local-only data so the requested cleanup flow can run safely and predictably:</p>
@@ -103,10 +105,10 @@
 
             <h3>Execution metadata</h3>
             <ul>
-              <li>last job result fields such as account id, account email, selected scope, scope results, timestamps, user-visible result message, and error code</li>
+              <li>last job result fields such as account id, selected scope, scope results, timestamps, user-visible result message, and error code; stored last-job snapshots remove <code>accountEmail</code> and redact email addresses from stored messages</li>
               <li>pending manual-resume context when reauthentication is required, including tab id, selected account id/email, selected scope, prior scope results, selected watch-channel id, and the My Activity source URL needed to resume safely</li>
-              <li>recent execution summaries by account and by watch channel, including status, timestamp, message, error code, and selected watch-channel id when relevant</li>
-              <li>notification debug trace when notification delivery fails or notification fallback handling throws</li>
+              <li>recent execution summaries by account and by watch channel, including status, timestamp, message, error code, and selected watch-channel id when relevant; stored execution-summary messages also redact email addresses before they are shown again in the popup</li>
+              <li>notification debug reason and timestamp when notification delivery fails or notification fallback handling throws</li>
             </ul>
 
             <h3>Popup UI preference</h3>
@@ -118,6 +120,7 @@
             <p>The extension stores local state in <code>chrome.storage.local</code> and removes expired items automatically in the background service worker.</p>
             <ul>
               <li><code>ytCleaner.lastJobResult</code>: up to 1 hour</li>
+              <li><code>ytCleaner.inFlightJob</code>: up to 10 minutes</li>
               <li><code>ytCleaner.pendingManualRun</code>: up to 30 minutes</li>
               <li><code>ytCleaner.lastNotificationDebug</code>: up to 1 hour</li>
               <li><code>ytCleaner.accountDiscoveryCache</code>: up to 7 days</li>
@@ -187,7 +190,8 @@
               <li><code>https://www.youtube.com/*</code> 에서 시청 기록을 삭제하고, 파괴적 동작 전에 active Google 계정과 active YouTube 채널을 검증합니다.</li>
               <li><code>https://myactivity.google.com/*</code> 에서 YouTube 검색 기록을 삭제하고, active Google 계정 검증 및 재인증/manual resume을 처리합니다.</li>
             </ul>
-            <p>이 확장은 백그라운드에서 사용자의 웹 활동을 모니터링하지 않습니다. 사용자가 요청한 정리 흐름을 실행하는 동안에만 해당 페이지들과 상호작용합니다.</p>
+            <p>이 확장은 백그라운드에서 일반적인 웹 활동을 모니터링하지 않습니다. 다만 popup을 열었을 때 즉시 응답할 수 있도록 해당 호스트들에 content script가 등록되어 있으며, 사용자가 account discovery, cleanup, manual resume을 시작하기 전까지는 대기 상태로 머뭅니다.</p>
+            <p>또한 최초 설치 시와 일부 버전 업데이트 시에는 공개 가이드 또는 릴리즈노트 페이지를 새 탭으로 열 수 있습니다.</p>
 
             <h2>로컬에서 처리되는 데이터</h2>
             <p>확장은 사용자가 요청한 정리 흐름을 안전하고 예측 가능하게 수행하기 위해 아래와 같은 로컬 전용 데이터를 저장할 수 있습니다.</p>
@@ -211,10 +215,10 @@
 
             <h3>실행 메타데이터</h3>
             <ul>
-              <li>최근 작업 결과 필드(account id, account email, 선택한 삭제 범위, scope 결과, 실행 시간, 결과 메시지, 오류 코드 등)</li>
+              <li>최근 작업 결과 필드(account id, 선택한 삭제 범위, scope 결과, 실행 시간, 결과 메시지, 오류 코드 등). 저장되는 last-job snapshot에서는 <code>accountEmail</code>을 제거하고, 저장 메시지의 이메일 주소를 마스킹합니다.</li>
               <li>재인증이 필요한 경우의 pending manual-resume context(tab id, 선택한 account id/email, 선택한 삭제 범위, 이전 scope 결과, 선택한 watch-channel id, 재개용 My Activity URL)</li>
-              <li>계정별 및 watch channel별 최근 실행 요약(상태, 시간, 결과 메시지, 오류 코드, 관련 watch-channel id 등)</li>
-              <li>notification 전송 실패 또는 fallback 처리 예외 시 debug trace</li>
+              <li>계정별 및 watch channel별 최근 실행 요약(상태, 시간, 결과 메시지, 오류 코드, 관련 watch-channel id 등). 저장되는 실행 요약 메시지도 popup에 다시 표시되기 전에 이메일 주소를 마스킹합니다.</li>
+              <li>notification 전송 실패 또는 fallback 처리 예외 시 저장되는 reason과 timestamp</li>
             </ul>
 
             <h3>Popup UI 설정</h3>
@@ -226,6 +230,7 @@
             <p>확장은 로컬 상태를 <code>chrome.storage.local</code>에 저장하며, 만료된 항목은 background service worker가 자동으로 정리합니다.</p>
             <ul>
               <li><code>ytCleaner.lastJobResult</code>: 최대 1시간</li>
+              <li><code>ytCleaner.inFlightJob</code>: 최대 10분</li>
               <li><code>ytCleaner.pendingManualRun</code>: 최대 30분</li>
               <li><code>ytCleaner.lastNotificationDebug</code>: 최대 1시간</li>
               <li><code>ytCleaner.accountDiscoveryCache</code>: 최대 7일</li>
