@@ -9,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./header-logo-dark.png">
-    <link rel="stylesheet" href="./styles.css?v=20260318-1">
+    <link rel="stylesheet" href="./styles.css?v=20260329-1">
     <script src="./lang-toggle.js" defer></script>
     <script src="./page-context.js" defer></script>
   </head>
   <body
     data-page-context="updates"
-    data-current-version="1.1.0"
+    data-current-version="1.1.1"
     data-title-en="Release Notes | YouTube History Cleaner"
     data-title-ko="릴리즈노트 | YouTube History Cleaner"
     data-description-en="Release notes for the YouTube History Cleaner Chrome extension."
@@ -75,6 +75,38 @@
           <div class="release-item">
             <div class="release-pills">
               <span class="pill pill-accent">Latest</span>
+              <span class="pill pill-muted">1.1.1</span>
+              <span class="pill pill-muted">2026-03-29</span>
+            </div>
+            <h2>Version 1.1.1</h2>
+            <p>A stability and performance patch — faster adaptive timing, safer mid-run behavior, and cleaner stored data.</p>
+            <h3>Faster adaptive timing</h3>
+            <p>
+              Fixed waits throughout account discovery and search deletion have been replaced with
+              condition-based adaptive waits. Account chooser selection, My Activity page transitions,
+              and bulk delete retries all respond to actual page readiness instead of fixed delays.
+            </p>
+            <h3>Safer mid-run behavior</h3>
+            <p>
+              If an automation tab closes unexpectedly during a run, the extension now stops immediately
+              instead of waiting for a timeout. Job locks are claimed before the first async step to
+              prevent duplicate runs, and orphaned in-flight jobs are properly cleaned up on restart.
+            </p>
+            <h3>Search deletion improvements</h3>
+            <p>
+              Added a row-level fallback confirm path for My Activity search deletion,
+              and full diagnostics (path used, failure stage, deleted count, timings)
+              are now propagated to stored results and the resume payload.
+            </p>
+            <h3>Data minimization</h3>
+            <p>
+              Notification debug logs no longer include plaintext titles or messages,
+              and stored result payloads now redact email addresses.
+            </p>
+          </div>
+
+          <div class="release-item" style="margin-top: 20px;">
+            <div class="release-pills">
               <span class="pill pill-muted">1.1.0</span>
               <span class="pill pill-muted">2026-03-17</span>
             </div>
@@ -113,6 +145,38 @@
           <div class="release-item">
             <div class="release-pills">
               <span class="pill pill-accent">Latest</span>
+              <span class="pill pill-muted">1.1.1</span>
+              <span class="pill pill-muted">2026-03-29</span>
+            </div>
+            <h2>버전 1.1.1</h2>
+            <p>안정성과 속도를 개선하는 패치입니다 — adaptive 타이밍 도입, 실행 중 안전성 강화, 저장 데이터 정리.</p>
+            <h3>adaptive 타이밍으로 속도 개선</h3>
+            <p>
+              계정 발견과 검색 삭제 전반에 걸쳐 고정 대기를 조건 기반 adaptive wait로 교체했어요.
+              계정 선택기, My Activity 페이지 전환, 일괄 삭제 재시도 모두 고정 지연 대신
+              실제 페이지 준비 상태에 맞춰 반응합니다.
+            </p>
+            <h3>실행 중 안전성 강화</h3>
+            <p>
+              자동화 탭이 실행 도중 예기치 않게 닫히면 타임아웃을 기다리지 않고 즉시 중단돼요.
+              작업 잠금을 첫 비동기 단계 전에 확보해서 중복 실행을 방지하고,
+              재시작 시 고아 상태로 남은 작업도 자동으로 정리됩니다.
+            </p>
+            <h3>검색 삭제 개선</h3>
+            <p>
+              My Activity 검색 삭제에 row 단위 fallback confirm 경로를 추가했고,
+              전체 진단 정보(사용 경로, 실패 단계, 삭제 건수, 타이밍)가
+              저장 결과와 재개 페이로드에 전파됩니다.
+            </p>
+            <h3>데이터 최소화</h3>
+            <p>
+              알림 디버그 로그에서 평문 제목과 메시지를 제거했고,
+              저장 결과에서 이메일 주소가 마스킹 처리됩니다.
+            </p>
+          </div>
+
+          <div class="release-item" style="margin-top: 20px;">
+            <div class="release-pills">
               <span class="pill pill-muted">1.1.0</span>
               <span class="pill pill-muted">2026-03-17</span>
             </div>

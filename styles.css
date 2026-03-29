@@ -124,6 +124,55 @@ a:hover { text-decoration: underline; }
   text-align: center;
 }
 
+.hero-split {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  text-align: left;
+}
+
+.hero-visual {
+  flex-shrink: 0;
+  width: 480px;
+  margin-left: -40px;
+}
+
+.hero-mockup {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.4));
+  animation: heroFloat 6s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hero-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-copy .hero-badge { margin-bottom: 24px; }
+.hero-copy .hero-sub { margin-left: 0; margin-right: 0; }
+.hero-copy .hero-cta { justify-content: flex-start; }
+.hero-copy .hero-meta { justify-content: flex-start; }
+
+@media (max-width: 900px) {
+  .hero-split {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-visual {
+    width: 320px;
+    order: -1;
+  }
+  .hero-copy .hero-sub { margin-left: auto; margin-right: auto; }
+  .hero-copy .hero-cta { justify-content: center; }
+  .hero-copy .hero-meta { justify-content: center; }
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
