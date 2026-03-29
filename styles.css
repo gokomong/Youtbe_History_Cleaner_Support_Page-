@@ -135,10 +135,11 @@ a:hover { text-decoration: underline; }
   flex-shrink: 0;
   width: 480px;
   margin-left: -40px;
+  overflow: visible;
 }
 
 .hero-mockup {
-  width: 100%;
+  width: 125%;
   height: auto;
   filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.4));
   animation: heroFloat 6s ease-in-out infinite;
