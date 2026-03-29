@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gokomong.github.io/Youtbe_History_Cleaner_Support_Page-/sitemap.xml
