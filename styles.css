@@ -258,6 +258,37 @@ a:hover { text-decoration: underline; }
 }
 .btn-secondary:hover { background: rgba(255, 255, 255, 0.14); text-decoration: none; }
 
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #A0A0A0;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+.btn-icon:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.14);
+}
+.btn-icon svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+}
+.btn-icon.copied {
+  color: var(--accent);
+  border-color: rgba(255, 59, 48, 0.4);
+  background: rgba(255, 59, 48, 0.1);
+}
+
 .hero-meta {
   display: flex;
   align-items: center;

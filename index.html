@@ -103,6 +103,9 @@
               <span data-lang-content="en">Release Notes</span>
               <span data-lang-content="ko" hidden>릴리즈노트</span>
             </a>
+            <button id="shareBtn" class="btn-icon" type="button" aria-label="Share">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="5" r="3" stroke-width="2" fill="none"/><circle cx="6" cy="12" r="3" stroke-width="2" fill="none"/><circle cx="18" cy="19" r="3" stroke-width="2" fill="none"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke-width="2"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke-width="2"/></svg>
+            </button>
           </div>
 
           <div class="hero-meta">
@@ -255,5 +258,33 @@
       </div>
     </footer>
 
+    <script>
+    (function () {
+      var btn = document.getElementById("shareBtn");
+      if (!btn) return;
+      var shareSvg = btn.innerHTML;
+      var checkSvg = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      var shareData = {
+        title: "YouTube History Cleaner",
+        text: "Clear YouTube watch & search history safely — completely local, no data collection.",
+        url: "https://gokomong.github.io/Youtbe_History_Cleaner_Support_Page-/"
+      };
+      btn.addEventListener("click", async function () {
+        if (navigator.share) {
+          try { await navigator.share(shareData); } catch (_) {}
+        } else {
+          try {
+            await navigator.clipboard.writeText(shareData.url);
+            btn.classList.add("copied");
+            btn.innerHTML = checkSvg;
+            setTimeout(function () {
+              btn.classList.remove("copied");
+              btn.innerHTML = shareSvg;
+            }, 2000);
+          } catch (_) {}
+        }
+      });
+    })();
+    </script>
   </body>
 </html>
