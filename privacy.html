@@ -78,7 +78,7 @@
             <h2>Summary</h2>
             <p>YouTube History Cleaner helps a user clear YouTube watch history and YouTube search history for a selected signed-in Google account.</p>
             <ul>
-              <li>The extension runs only after an explicit user action in the popup.</li>
+              <li>Destructive cleanup runs start only after an explicit user action in the popup.</li>
               <li>The extension does not sell data or send personal data to external servers.</li>
               <li>Runtime state is stored locally in <code>chrome.storage.local</code>.</li>
             </ul>
@@ -90,7 +90,7 @@
               <li><code>https://myactivity.google.com/*</code> to clear YouTube search history, verify the active Google account, and handle reauthentication/manual resume.</li>
             </ul>
             <p>The extension does not monitor general browsing activity in the background. Content scripts are registered on these hosts so the extension can respond when the user opens the popup, but they remain idle until the user starts account discovery, cleanup, or manual resume.</p>
-            <p>On first install, and on eligible version updates, the extension may also open its public guide or release-notes page in a new browser tab.</p>
+            <p>On first install, and on eligible version updates, the extension may also open its public home or release-notes page in a new browser tab.</p>
 
             <h2>Data Processed Locally</h2>
             <p>The extension may store the following local-only data so the requested cleanup flow can run safely and predictably:</p>
@@ -163,7 +163,7 @@
             <ul>
               <li><code>storage</code>: store minimal local state required for safe execution, manual resume, recent result display, and popup theme preference</li>
               <li><code>tabs</code>: open, update, and focus the automation tab used for AccountChooser, YouTube history, and My Activity</li>
-              <li><code>notifications</code>: show completion or failure results for cleanup runs, with a service worker fallback path if the Notifications API is unavailable</li>
+              <li><code>notifications</code>: show completion or failure results for cleanup runs, with a service worker fallback path if <code>chrome.notifications.create()</code> is unavailable or fails</li>
             </ul>
             <p>Host access is limited to:</p>
             <ul>
@@ -188,7 +188,7 @@
             <h2>요약</h2>
             <p>YouTube History Cleaner는 로그인된 Google 계정을 선택해 YouTube 시청 기록과 검색 기록을 정리할 수 있도록 돕는 확장 프로그램입니다.</p>
             <ul>
-              <li>이 확장은 popup에서 사용자가 직접 실행할 때만 동작합니다.</li>
+              <li>파괴적 cleanup 실행은 popup에서 사용자가 직접 시작할 때만 동작합니다.</li>
               <li>개인정보를 외부 서버로 전송하거나 판매하지 않습니다.</li>
               <li>런타임 상태는 <code>chrome.storage.local</code>에만 저장됩니다.</li>
             </ul>
@@ -200,7 +200,7 @@
               <li><code>https://myactivity.google.com/*</code> 에서 YouTube 검색 기록을 삭제하고, active Google 계정 검증 및 재인증/manual resume을 처리합니다.</li>
             </ul>
             <p>이 확장은 백그라운드에서 일반적인 웹 활동을 모니터링하지 않습니다. 다만 popup을 열었을 때 즉시 응답할 수 있도록 해당 호스트들에 content script가 등록되어 있으며, 사용자가 account discovery, cleanup, manual resume을 시작하기 전까지는 대기 상태로 머뭅니다.</p>
-            <p>또한 최초 설치 시와 일부 버전 업데이트 시에는 공개 가이드 또는 릴리즈노트 페이지를 새 탭으로 열 수 있습니다.</p>
+            <p>또한 최초 설치 시와 일부 버전 업데이트 시에는 공개 홈 또는 릴리즈노트 페이지를 새 탭으로 열 수 있습니다.</p>
 
             <h2>로컬에서 처리되는 데이터</h2>
             <p>확장은 사용자가 요청한 정리 흐름을 안전하고 예측 가능하게 수행하기 위해 아래와 같은 로컬 전용 데이터를 저장할 수 있습니다.</p>
@@ -273,7 +273,7 @@
             <ul>
               <li><code>storage</code>: 안전한 실행, manual resume, 최근 결과 표시, popup theme 저장에 필요한 최소 로컬 상태를 저장합니다.</li>
               <li><code>tabs</code>: AccountChooser, YouTube history, My Activity에 사용하는 automation tab을 열고, 갱신하고, 포커스합니다.</li>
-              <li><code>notifications</code>: 정리 실행의 완료/실패 결과를 알림으로 표시합니다. Notifications API를 사용할 수 없으면 service worker fallback 경로를 사용합니다.</li>
+              <li><code>notifications</code>: 정리 실행의 완료/실패 결과를 알림으로 표시합니다. <code>chrome.notifications.create()</code>를 사용할 수 없거나 호출이 실패하면 service worker fallback 경로를 사용합니다.</li>
             </ul>
             <p>Host access는 아래 사이트로 제한됩니다.</p>
             <ul>
@@ -330,3 +330,4 @@
 
   </body>
 </html>
+
